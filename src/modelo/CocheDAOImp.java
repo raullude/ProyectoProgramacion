@@ -45,7 +45,7 @@ public class CocheDAOImp implements CocheDAO {
 		try (PreparedStatement preparedstatement = conexion.prepareStatement(sql);) {
 			preparedstatement.setString(1, numeroBastidor);
 			deletes = preparedstatement.executeUpdate();
-			Logs.crearLog("Coche borrado el " + LocalDate.now() + " con numero de bastidor " + numeroBastidor);
+			Logs.crearLog("Coche borrado el " + LocalDate.now() + " con numero de bastidor " + numeroBastidor +"\n" );
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -65,7 +65,7 @@ public class CocheDAOImp implements CocheDAO {
 			preparedStatement.setString(3, coche.getColor());
 			preparedStatement.setString(4, coche.getNumeroBastidor());
 			actualizados = preparedStatement.executeUpdate();
-			Logs.crearLog("Coche actualizado el " + LocalDate.now() + " con numero de bastidor " + coche.getNumeroBastidor());
+			Logs.crearLog("Coche actualizado el " + LocalDate.now() + " con numero de bastidor " + coche.getNumeroBastidor() +"\n");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -83,7 +83,7 @@ public class CocheDAOImp implements CocheDAO {
 			preparedStatement.setString(3, coche.getModelo());
 			preparedStatement.setString(4, coche.getColor());
 			inserts = preparedStatement.executeUpdate();
-			Logs.crearLog("Coche insertado el " + LocalDate.now() + " con numero de bastidor " + coche.getNumeroBastidor());
+			Logs.crearLog("Coche insertado el " + LocalDate.now() + " con numero de bastidor " + coche.getNumeroBastidor() +"\n");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
